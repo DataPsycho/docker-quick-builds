@@ -1,0 +1,18 @@
+version: "3"
+services:
+# Service for the Postgres database
+  db:
+    # Pull the latest 'postgres' image
+    image: "postgres:latest"
+    container_name: "postgres_docker"
+    # Postgres environment parameters
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD="admin!"
+      - POSTGRES_DB=test_db
+    # Bind mount the default Postgres port
+    ports:
+      - "5433:5432"
+    # Bind mount local volume for Postgres data
+    volumes:
+      - ${HOME}/DockerProjects/sql/postgresdev/pgdata:/var/lib/postgresql/data
