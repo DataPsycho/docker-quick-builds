@@ -1,3 +1,5 @@
 /nosql/mongodev/data
+/nosql/dynamodev/data
 /sql/postgresdev/pgdata
+/sql/mysqldev/data
 
